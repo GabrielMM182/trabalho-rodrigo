@@ -1,0 +1,24 @@
+name: Gerando docker image node
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+        # vai checar se esta atualizado
+        
+      - name: logar no dockerHub
+        uses: docker/login-action@v1
+        with:
+          # vaifazer o login no docker hub
+          username: ${{ secrets.username }}
+          password: ${{ secrets.password }}
+
+      - name: enviar imagem no docker hub
+        working-directory: ./node-api/
+        run: |
+          docker build -t pauloprs/marvel-api:latest .
+          docker push pauloprs/marvel-api:latest
