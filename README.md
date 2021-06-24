@@ -10,3 +10,10 @@ o test vai rodar dois tipos de testes
 - o primeiro vai realizar 4 operações basicas de matematica e confirmar se estão corretas 
 - o segundo vai fazer confirmar se esta realizando uma procura na marvel e puxando pelo id desejado 
 
+* os testes unitarios poder ser visualizados com pate visual em ./result 
+
+* utilizado* 
+
+- npm install
+- npm i jest
+- npm i axios
