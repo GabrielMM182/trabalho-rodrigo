@@ -23,5 +23,10 @@
   },
   "engines": {
     "node": "v10.x"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageReporters": ["text"],
+    "coverageDirectory": "./result"
   }
 }
